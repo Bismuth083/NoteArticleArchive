@@ -1,0 +1,144 @@
+{
+	"Header 2": {
+		"scope": "markdown",
+		"prefix": "h2",
+		"body": [
+			"## ${1:Header}",
+			"",
+			"$0"
+		],
+		"description": "大見出し",
+	},
+	"Header 3": {
+		"scope": "markdown",
+		"prefix": "h3",
+		"body": [
+			"### ${1:Header}",
+			"",
+			"$0"
+		],
+		"description": "小見出し",
+	},
+	"Separator Line": {
+		"scope": "markdown",
+		"prefix": "separator",
+		"body": [
+			"${TM_SELECTED_TEXT}",
+			"",
+			"---",
+			"",
+			"$0"
+		],
+		"description": "区切り線",
+	},
+	"Quote": {
+		"scope": "markdown",
+		"prefix": "quote",
+		"body": [
+			"> ${TM_SELECTED_TEXT}$0",
+			"",
+			"出典: ${1:Source}"
+		],
+		"description": "引用",
+	},
+	"Link": {
+		"scope": "markdown",
+		"prefix": "link",
+		"body": [
+			"[${1:Link}$CLIPBOARD](${TM_SELECTED_TEXT}${2:Text})$0"
+		],
+		"description": "リンク",
+	},
+	"Bullet List": {
+		"scope": "markdown",
+		"prefix": "bulletlist",
+		"body": [
+			"- ${TM_SELECTED_TEXT}$0"
+		],
+		"description": "順序なしリスト",
+	},
+	"Numbered List": {
+		"scope": "markdown",
+		"prefix": "numberedlist",
+		"body": [
+			"1. ${TM_SELECTED_TEXT}$0"
+		],
+		"description": "順序ありリスト",
+	},
+	"Bold": {
+		"scope": "markdown",
+		"prefix": "bold",
+		"body": [
+			"**${TM_SELECTED_TEXT}$1**$0"
+		],
+		"description": "太字",
+	},
+	"StrikeThrough": {
+		"scope": "markdown",
+		"prefix": "strikethough",
+		"body": [
+			"~~${TM_SELECTED_TEXT}$1~~$0"
+		],
+		"description": "打ち消し線",
+	},
+	"Term": {
+		"scope": "markdown",
+		"prefix": "term",
+		"body": [
+			"**${TM_SELECTED_TEXT}${1:Term}** ${2:Definition}",
+			"",
+			"$0",
+		],
+		"description": "用語と定義(ただの太字!!記法と統一するために残してあります)",
+	},
+	"Code": {
+		"scope": "markdown",
+		"prefix": "code",
+		"body": [
+			"```",
+			"$CLIPBOARD $0",
+			"```",
+		],
+		"description": "コードブロック(独立)",
+		// ${1:Lang}で言語指定できるっぽいけどやり方がわからない。
+	},
+	"Mermaid": {
+		"scope": "markdown",
+		"prefix": "mermaid",
+		"body": [
+			"```",
+			"```mermaid",
+			"$CLIPBOARD ${1:chart}",
+			"```",
+			"",
+			"$0",
+		],
+		"description": "Mermaidのチャート(貼り付けた後に「```」をつけること)",
+	},
+	"Inline Equation": {
+		"scope": "markdown",
+		"prefix": "inlineequation",
+		"body": [
+			"$&{$1}$$$0"
+		],
+		"description": "インライン数式",
+	},
+	"Block Equation": {
+		"scope": "markdown",
+		"prefix": "blockequation",
+		"body": [
+			"$$",
+			"$0",
+			"$$",
+		],
+		"description": "独立した、ブロックの数式",
+	},
+	"Ruby": {
+		"scope": "markdown",
+		"prefix": "ruby",
+		"body": [
+			"｜${TM_SELECTED_TEXT}${1:Kanji}《${2:Yomi}》$0"
+		],
+		"description": "ルビ(青空文庫記法)",
+	},
+}
