@@ -45,7 +45,7 @@
 		"scope": "markdown",
 		"prefix": "link",
 		"body": [
-			"[${1:Link}$CLIPBOARD](${TM_SELECTED_TEXT}${2:Text})$0"
+			"[${1:Text}${TM_SELECTED_TEXT}]($CLIPBOARD${2:Link})$0"
 		],
 		"description": "リンク",
 	},
